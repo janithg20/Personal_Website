@@ -554,6 +554,14 @@
 .cf-status{ margin-top: 16px; font-family: var(--font-mono); font-size: 13px; text-align: center; }
 .cf-status.success{ color: var(--pass); }
 .cf-status.error{ color: var(--red-fail); }
+.form-actions{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+.form-actions .btn{ border: none; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -1114,21 +1122,27 @@
             <input type="checkbox" name="botcheck" class="hidden-field" style="display:none;">
 
             <div class="form-row">
-            <label for="cf-name">Name</label>
-            <input type="text" id="cf-name" name="name" required placeholder="Your name">
-        </div>
-        <div class="form-row">
-           <label for="cf-email">Email</label>
-         <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
-        </div>
-         <div class="form-row">
-             <label for="cf-message">Message</label>
-                <textarea id="cf-message" name="message" required placeholder="What would you like to discuss?" rows="5"></textarea>
-          </div>
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-row">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-row">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" required placeholder="What would you like to discuss?" rows="5"></textarea>
+            </div>
+            
+            <div class="form-actions">
+  <button type="submit" class="btn btn-primary" id="cf-submit">Send message →</button>
+  <a href="https://www.linkedin.com/in/janithgunasekara/" target="_blank" rel="noopener" class="btn btn-ghost btn-icon" aria-label="LinkedIn profile">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM3.558 20.452h3.56V9h-3.56v11.452z"/></svg>
+    LinkedIn
+  </a>
+</div>
 
-             <button type="submit" class="btn btn-primary" id="cf-submit">Send message →</button>
-
-            <p id="cf-status" class="cf-status"></p>
+<p id="cf-status" class="cf-status"></p>
           </form>
           <a href="https://www.linkedin.com/in/janithgunasekara/" target="_blank" rel="noopener" class="btn btn-ghost btn-icon" aria-label="LinkedIn profile">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM3.558 20.452h3.56V9h-3.56v11.452z"/></svg>
